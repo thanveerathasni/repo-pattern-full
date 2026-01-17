@@ -1,12 +1,10 @@
 const users = require("../models/userModel");
 
-const createUser = (user) => {
+exports.createUser = (user) => {
   users.push(user);
   return user;
 };
 
-const findByEmail = (email) => {
+exports.findByEmail = (email) => {
   return users.find(u => u.email === email);
 };
-
-module.exports = { createUser, findByEmail };
